@@ -11,8 +11,6 @@ var squared = false;
 
 window.onload = function() {
 
-	$('.button').mousedown(() => false);
-
 	canvas = document.getElementById("canvas");
 	ctx = canvas.getContext("2d");
 	updateInterpolation();
