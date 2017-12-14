@@ -4,29 +4,20 @@
     <head>
         <meta charset="utf-8">
         <script src="jquery-3.2.1.js"></script>
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script type="text/javascript" src="index.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="js/canvas_editor.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <!-- <link rel="stylesheet" href="style.css"> -->
         <title>PDI Final</title>
     </head>
 
     <body>
       <div>
         <div>
-          <h2> - Double click to add or remove point</h2>
-          <h2> - Click and drag to move a point</h2>
+            <input id="image-picker" name="imagePicker" onchange="handleImage(event)" type="file"
+                        data-allowed-file-extensions='["bmp","png", "jpg", "jpeg"]'/>
         </div>
         <div>
-          <button onclick="changeToLinear()" class="button">Linear</button>
-          <button onclick="changeToSquare()" class="button">Square</button>
-        </div>
-        <div>
-          <canvas id="canvas" width="600px" height="400px"
-                  ondblclick="canvasDoubleClick(event)"
-                  onmousedown="canvasMouseDown(event)"
-                  onmouseup="canvasMouseUp(event)"
-                  onmousemove="canvasMouseMove(event)"
-                  onmouseleave="canvasMouseUp(event)"></canvas>
+            <div id="canvas-div"/>
         </div>
       </div>
     </body>
